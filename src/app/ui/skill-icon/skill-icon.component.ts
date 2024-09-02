@@ -27,6 +27,9 @@ import {
   siWebrtc,
   siHtml5,
   siVercel,
+  siMongodb,
+  siPostgresql,
+  siSqlite,
 } from 'simple-icons';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
@@ -59,6 +62,9 @@ export const SkillIcon = {
   firebase: null,
   html5: siHtml5,
   vercel: siVercel,
+  mongodb: siMongodb,
+  postgresql: siPostgresql,
+  sqlite: siSqlite,
 };
 
 export type TSkillIcon = typeof SkillIcon;

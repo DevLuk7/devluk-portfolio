@@ -27,5 +27,6 @@ export class SectionSkillsComponent {
     ['frontend', ['angular', 'react']],
     ['backend', ['nodedotjs', 'nestjs']],
     ['cloud', ['aws', 'firebase', 'vercel']],
+    ['database', ['mongodb', 'neo4j', 'postgresql', 'sqlite']],
   ];
 }
