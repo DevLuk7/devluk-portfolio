@@ -1,0 +1,13 @@
+<span
+  class="text-xs font-medium me-2 px-2.5 py-0.5 rounded border-2 text-nowrap"
+  [ngClass]="class()"
+  [style]="
+    color
+      ? {
+          color: color,
+          'border-color': color
+        }
+      : null
+  "
+  >{{ skill() }}</span
+>
