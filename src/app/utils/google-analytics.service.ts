@@ -48,7 +48,7 @@ export class GoogleAnalyticsService {
       }
       gtag('js', new Date());
 
-      gtag('config', ${this.trackingId});
+      gtag('config', '${this.trackingId}');
     `;
     this.document.head.appendChild(script2);
   }
