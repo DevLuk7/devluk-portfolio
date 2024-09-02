@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject, isDevMode } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { GoogleAnalyticsService } from './utils/google-analytics.service';
 
 @Component({
   standalone: true,
@@ -11,4 +12,12 @@ import { HomeComponent } from './home/home.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {}
+export class AppComponent {
+  private readonly googleAnalyticsService = inject(GoogleAnalyticsService);
+
+  constructor() {
+    if (!isDevMode()) {
+      this.googleAnalyticsService.loadGoogleAnalytics();
+    }
+  }
+}
