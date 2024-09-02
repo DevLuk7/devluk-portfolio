@@ -6,6 +6,7 @@ import {
   TSkillIconKey,
 } from '../ui/skill-icon/skill-icon.component';
 import { SectionSkillsComponent } from './section-skills/section-skills.component';
+import { ResumeButtonComponent } from '../ui/resume-button/resume-button.component';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ import { SectionSkillsComponent } from './section-skills/section-skills.componen
     SectionWorkProjectsComponent,
     SectionSkillsComponent,
     SkillIconComponent,
+    ResumeButtonComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
