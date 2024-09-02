@@ -20,7 +20,7 @@
         <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
           {{ project.desc }}
         </p>
-        <div>
+        <div class="flex flex-wrap gap-2 justify-center">
           @for (skill of project.skills; track $index) {
           <app-skill-badge [skill]="skill"></app-skill-badge>
           }
