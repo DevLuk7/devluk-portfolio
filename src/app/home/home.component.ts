@@ -5,24 +5,21 @@ import {
   SkillIconComponent,
   TSkillIconKey,
 } from '../ui/skill-icon/skill-icon.component';
+import { SectionSkillsComponent } from './section-skills/section-skills.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, SectionWorkProjectsComponent, SkillIconComponent],
+  imports: [
+    CommonModule,
+    SectionWorkProjectsComponent,
+    SectionSkillsComponent,
+    SkillIconComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  readonly skills: TSkillIconKey[] = [
-    'javascript',
-    'typescript',
-    'angular',
-    'react',
-    'nodedotjs',
-    'nestjs',
-  ];
-
   readonly certificates: { name: TSkillIconKey; link: string }[] = [
     {
       name: 'nestjs',

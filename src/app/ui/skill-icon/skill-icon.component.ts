@@ -25,6 +25,9 @@ import {
   siNpm,
   siYarn,
   siWebrtc,
+  siFirebase,
+  siHtml5,
+  siVercel,
 } from 'simple-icons';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 // import * as angular from './icons/angular-color.svg';
@@ -56,6 +59,9 @@ export const SkillIcon = {
   npm: siNpm,
   yarn: siYarn,
   webrtc: siWebrtc,
+  firebase: null,
+  html5: siHtml5,
+  vercel: siVercel,
 };
 
 export type TSkillIcon = typeof SkillIcon;
