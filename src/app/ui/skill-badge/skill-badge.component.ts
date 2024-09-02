@@ -38,7 +38,8 @@ export type Skill =
   | 'date-fns'
   | 'NPM'
   | 'Yarn'
-  | 'WebRTC';
+  | 'WebRTC'
+  | 'GitLab';
 
 const skillColor: Partial<Record<Skill, string>> = {
   JavaScript: '#F7DF1E',
