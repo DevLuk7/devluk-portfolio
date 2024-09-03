@@ -98,6 +98,15 @@ export const skillName: Partial<Record<TSkillIconKey, string>> = {
   aws: 'AWS',
 };
 
+export const skillCustomIcon: Partial<Record<TSkillIconKey, string>> = {
+  angular: 'angular-color.svg',
+  firebase: 'firebase-color.svg',
+  aggrid: 'aggrid-color.svg',
+  rwd: 'rwd-color.svg',
+  elf: 'elf-color.png',
+  aws: 'aws-color.svg',
+};
+
 export type TSkillIcon = typeof skillIcon;
 export type TSkillIconKey = keyof TSkillIcon;
 

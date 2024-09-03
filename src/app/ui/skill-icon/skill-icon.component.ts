@@ -1,7 +1,7 @@
 import { Component, inject, input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { skillIcon, TSkillIconKey } from '../skills.service';
+import { skillCustomIcon, skillIcon, TSkillIconKey } from '../skills.service';
 
 @Component({
   selector: 'app-skill-icon',
@@ -28,11 +28,6 @@ export class SkillIconComponent implements OnInit {
         siIcon.svg.replace('<svg', `<svg style="fill: #${siIcon.hex};"`)
       );
     }
-    this.src = `/icons/${this.skill()}-color.svg`;
-  }
-
-  checkPng() {
-    console.log('test');
-    this.src = `/icons/${this.skill()}-color.png`;
+    this.src = `/icons/${skillCustomIcon[this.skill()]}`;
   }
 }
