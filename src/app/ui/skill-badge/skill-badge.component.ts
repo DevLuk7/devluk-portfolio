@@ -39,7 +39,8 @@ export type Skill =
   | 'NPM'
   | 'Yarn'
   | 'WebRTC'
-  | 'GitLab';
+  | 'GitLab'
+  | 'TailwindCSS';
 
 const skillColor: Partial<Record<Skill, string>> = {
   JavaScript: '#F7DF1E',

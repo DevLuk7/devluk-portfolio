@@ -7,6 +7,7 @@ import {
 } from '../ui/skill-icon/skill-icon.component';
 import { SectionSkillsComponent } from './section-skills/section-skills.component';
 import { ResumeButtonComponent } from '../ui/resume-button/resume-button.component';
+import { SectionSideProjectsComponent } from './section-side-projects/section-side-projects.component';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,7 @@ import { ResumeButtonComponent } from '../ui/resume-button/resume-button.compone
     SectionSkillsComponent,
     SkillIconComponent,
     ResumeButtonComponent,
+    SectionSideProjectsComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
