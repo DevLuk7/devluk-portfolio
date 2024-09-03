@@ -13,7 +13,7 @@ export class ProjectsService {
     {
       name: 'Profile Map References',
       desc: 'Created an application using Neo4j for managing and visualizing reference data in a knowledge graph format.',
-      skills: ['typescript', 'angular', 'ngrx', 'rxjs', 'neo4j', 'aggrid'],
+      skills: ['typescript', 'angular', 'elf', 'rxjs', 'neo4j', 'aggrid'],
     },
     {
       name: 'German Energy Dashboard',
@@ -58,7 +58,7 @@ export class ProjectsService {
     },
     {
       name: 'Affiliate system for FinTech',
-      desc: 'System for managing affiliates in the FinTech industry.',
+      desc: 'Developed a affiliate management system tailored for the FinTech sector, enabling efficient tracking, monitoring and performance metrics.',
       skills: [
         'typescript',
         'angular',
@@ -72,7 +72,7 @@ export class ProjectsService {
     },
     {
       name: 'Multiportals in environment industry',
-      desc: 'Designed and developed multiportals for the environment industry.',
+      desc: 'Designed and developed multiple web portals for the environmental sector, integrating external applications via iframes, utilizing WebSockets for real-time data management.',
       skills: [
         'typescript',
         'angular',

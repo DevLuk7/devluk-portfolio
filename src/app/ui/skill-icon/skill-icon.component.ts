@@ -19,6 +19,7 @@ export class SkillIconComponent implements OnInit {
   private readonly sanitizer = inject(DomSanitizer);
 
   icon!: SafeHtml;
+  src!: string;
 
   ngOnInit(): void {
     const siIcon = skillIcon[this.skill()];
@@ -27,5 +28,11 @@ export class SkillIconComponent implements OnInit {
         siIcon.svg.replace('<svg', `<svg style="fill: #${siIcon.hex};"`)
       );
     }
+    this.src = `/icons/${this.skill()}-color.svg`;
+  }
+
+  checkPng() {
+    console.log('test');
+    this.src = `/icons/${this.skill()}-color.png`;
   }
 }

@@ -63,7 +63,7 @@ export const skillIcon = {
   d3dotjs: siD3dotjs,
   neo4j: siNeo4j,
   pwa: siPwa,
-  aws: siAmazonwebservices,
+  aws: null,
   sass: siSass,
   coffeescript: siCoffeescript,
   css3: siCss3,
@@ -81,6 +81,7 @@ export const skillIcon = {
   rwd: null,
   gitlab: siGitlab,
   tailwindcss: siTailwindcss,
+  elf: null,
 };
 
 export const skillColor: Partial<Record<TSkillIconKey, string>> = {
@@ -93,6 +94,8 @@ export const skillName: Partial<Record<TSkillIconKey, string>> = {
   firebase: 'Firebase',
   aggrid: 'AG Grid',
   rwd: 'RWD',
+  elf: 'Elf',
+  aws: 'AWS',
 };
 
 export type TSkillIcon = typeof skillIcon;
