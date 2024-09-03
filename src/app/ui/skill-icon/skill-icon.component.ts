@@ -10,7 +10,7 @@ import { skillCustomIcon, skillIcon, TSkillIconKey } from '../skills.service';
   templateUrl: './skill-icon.component.html',
   styleUrl: './skill-icon.component.scss',
   host: {
-    class: 'w-12 h-12',
+    class: 'block w-12 h-12',
   },
 })
 export class SkillIconComponent implements OnInit {
