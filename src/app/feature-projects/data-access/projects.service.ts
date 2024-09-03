@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Skill } from 'src/app/ui/skill-badge/skill-badge.component';
+import { TSkillIconKey } from 'src/app/ui/skills.service';
 
 export interface Project {
   name: string;
   desc: string;
-  skills: Skill[];
+  skills: TSkillIconKey[];
 }
 
 @Injectable({ providedIn: 'root' })
@@ -13,69 +13,76 @@ export class ProjectsService {
     {
       name: 'Profile Map References',
       desc: 'Created an application using Neo4j for managing and visualizing reference data in a knowledge graph format.',
-      skills: ['TypeScript', 'Angular', 'NgRx', 'RxJS', 'NEO4J', 'AG Grid'],
+      skills: ['typescript', 'angular', 'ngrx', 'rxjs', 'neo4j', 'aggrid'],
     },
     {
       name: 'German Energy Dashboard',
       desc: 'Developed an interactive dashboard for tracking energy metrics in Germany, focusing on renewable and non-renewable sources.',
-      skills: ['TypeScript', 'Angular', 'NgRx', 'RxJS', 'Chart.js', 'D3.js'],
+      skills: [
+        'typescript',
+        'angular',
+        'ngrx',
+        'rxjs',
+        'chartdotjs',
+        'd3dotjs',
+      ],
     },
     {
       name: 'The Spark',
       desc: 'Enhanced Q_PERIOR by launching a platform for employees to propose and assess business improvement ideas, aiding in the allocation of innovation funds.',
-      skills: ['TypeScript', 'Angular', 'NgRx', 'RxJS', 'RWD', 'Jest'],
+      skills: ['typescript', 'angular', 'ngrx', 'rxjs', 'rwd', 'Jest'],
     },
     {
       name: 'R&D Department Initiatives',
       desc: 'Engaged in varied R&D projects covering education, communication, HR, and environmental innovations.',
       skills: [
-        'TypeScript',
-        'Angular',
-        'React',
-        'NgRx',
-        'RxJS',
-        'Docker',
-        'RWD',
-        'Storybook',
+        'typescript',
+        'angular',
+        'react',
+        'ngrx',
+        'rxjs',
+        'docker',
+        'rwd',
+        'storybook',
       ],
     },
     {
       name: 'Swiss Social Assistance',
       desc: 'Worked on programs within the Swiss public sector focusing on social assistance.',
-      skills: ['TypeScript', 'Angular', 'NgRx', 'RxJS'],
+      skills: ['typescript', 'angular', 'ngrx', 'rxjs'],
     },
     {
       name: 'Swiss Election System',
       desc: 'Developed a system for public officials to manage elections, track progress, and generate outcome reports in Switzerland.',
-      skills: ['TypeScript', 'Angular', 'NgRx', 'RxJS'],
+      skills: ['typescript', 'angular', 'ngrx', 'rxjs'],
     },
     {
       name: 'Affiliate system for FinTech',
       desc: 'System for managing affiliates in the FinTech industry.',
       skills: [
-        'TypeScript',
-        'Angular',
-        'NgRx',
-        'RxJS',
-        'GitLab',
-        'CSS3',
-        'RWD',
-        'Sass',
+        'typescript',
+        'angular',
+        'ngrx',
+        'rxjs',
+        'gitlab',
+        'css3',
+        'rwd',
+        'sass',
       ],
     },
     {
       name: 'Multiportals in environment industry',
       desc: 'Designed and developed multiportals for the environment industry.',
       skills: [
-        'TypeScript',
-        'Angular',
-        'NgRx',
-        'RxJS',
-        'PWA',
-        'GitLab',
-        'CSS3',
-        'RWD',
-        'Sass',
+        'typescript',
+        'angular',
+        'ngrx',
+        'rxjs',
+        'pwa',
+        'gitlab',
+        'css3',
+        'rwd',
+        'sass',
       ],
     },
   ];
@@ -84,7 +91,7 @@ export class ProjectsService {
     {
       name: 'Portfolio',
       desc: 'Built a personal portfolio website to showcase my work and skills.',
-      skills: ['TypeScript', 'Angular', 'RxJS', 'Sass', 'RWD', 'TailwindCSS'],
+      skills: ['typescript', 'angular', 'rxjs', 'sass', 'rwd', 'tailwindcss'],
     },
   ];
 }

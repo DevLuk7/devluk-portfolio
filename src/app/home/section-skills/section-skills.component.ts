@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  SkillIconComponent,
-  TSkillIconKey,
-} from 'src/app/ui/skill-icon/skill-icon.component';
+import { SkillIconComponent } from 'src/app/ui/skill-icon/skill-icon.component';
+import { TSkillIconKey } from 'src/app/ui/skills.service';
 
 @Component({
   selector: 'app-section-skills',
@@ -13,15 +11,6 @@ import {
   styleUrl: './section-skills.component.scss',
 })
 export class SectionSkillsComponent {
-  readonly skills: TSkillIconKey[] = [
-    'javascript',
-    'typescript',
-    'angular',
-    'react',
-    'nodedotjs',
-    'nestjs',
-  ];
-
   readonly skillsByTech: [string, TSkillIconKey[]][] = [
     ['language', ['html5', 'css3', 'javascript', 'typescript']],
     ['frontend', ['angular', 'react']],
