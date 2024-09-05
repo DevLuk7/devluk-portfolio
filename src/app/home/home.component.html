@@ -40,30 +40,7 @@
 
     <app-section-skills />
 
-    <div class="mx-auto text-center">
-      <h2
-        class="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white"
-      >
-        Certificates
-      </h2>
-      <div
-        class="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36"
-      >
-        <div
-          class="flex flex-wrap justify-center items-center mt-8 text-gray-500"
-        >
-          @for (cert of certificates; track $index) {
-          <a
-            [href]="cert.link"
-            target="_blank"
-            class="mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
-          >
-            <app-skill-icon [skill]="cert.name" />
-          </a>
-          }
-        </div>
-      </div>
-    </div>
+    <app-section-certificates />
 
     <app-section-work-projects />
 

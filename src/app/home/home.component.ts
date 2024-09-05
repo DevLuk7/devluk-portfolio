@@ -3,9 +3,8 @@ import { CommonModule } from '@angular/common';
 import { SectionWorkProjectsComponent } from './section-work-projects/section-work-projects.component';
 import { SkillIconComponent } from '../ui/skill-icon/skill-icon.component';
 import { SectionSkillsComponent } from './section-skills/section-skills.component';
-import { ResumeButtonComponent } from '../ui/resume-button/resume-button.component';
 import { SectionSideProjectsComponent } from './section-side-projects/section-side-projects.component';
-import { TSkillIconKey } from '../ui/skills.service';
+import { SectionCertificatesComponent } from './section-certificates/section-certificates.component';
 
 @Component({
   selector: 'app-home',
@@ -15,17 +14,10 @@ import { TSkillIconKey } from '../ui/skills.service';
     SectionWorkProjectsComponent,
     SectionSkillsComponent,
     SkillIconComponent,
-    ResumeButtonComponent,
     SectionSideProjectsComponent,
+    SectionCertificatesComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-  readonly certificates: { name: TSkillIconKey; link: string }[] = [
-    {
-      name: 'nestjs',
-      link: '/certificates/nestjs-fundamentals.pdf',
-    },
-  ];
-}
+export class HomeComponent {}
