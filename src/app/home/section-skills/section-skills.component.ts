@@ -13,8 +13,8 @@ import { TSkillIconKey } from 'src/app/ui/skills.service';
 export class SectionSkillsComponent {
   readonly skillsByTech: [string, TSkillIconKey[]][] = [
     ['language', ['html5', 'css3', 'javascript', 'typescript']],
-    ['frontend', ['angular', 'react']],
-    ['backend', ['nodedotjs', 'nestjs']],
+    ['frontend', ['angular', 'react', 'nextdotjs']],
+    ['backend', ['nodedotjs', 'express', 'nestjs']],
     ['cloud', ['aws', 'firebase', 'vercel']],
     ['database', ['mongodb', 'neo4j', 'postgresql', 'sqlite']],
   ];

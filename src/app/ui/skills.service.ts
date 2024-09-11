@@ -16,7 +16,6 @@ import {
   siD3dotjs,
   siNeo4j,
   siPwa,
-  siAmazonwebservices,
   siSass,
   siCoffeescript,
   siCss3,
@@ -32,6 +31,8 @@ import {
   SimpleIcon,
   siTailwindcss,
   siGitlab,
+  siNextdotjs,
+  siExpress,
 } from 'simple-icons';
 
 const randomColors = [
@@ -82,6 +83,8 @@ export const skillIcon = {
   gitlab: siGitlab,
   tailwindcss: siTailwindcss,
   elf: null,
+  nextdotjs: siNextdotjs,
+  express: siExpress,
 };
 
 export const skillColor: Partial<Record<TSkillIconKey, string>> = {
