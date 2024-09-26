@@ -40,6 +40,8 @@ import {
   siChromewebstore,
   siLucid,
   siLucide,
+  siPassport,
+  siOpenapiinitiative,
 } from 'simple-icons';
 
 const randomColors = [
@@ -98,6 +100,8 @@ export const skillIcon = {
   digitalocean: siDigitalocean,
   chromewebstore: siChromewebstore,
   lucide: siLucide,
+  passport: siPassport,
+  openapiinitiativea: siOpenapiinitiative,
 };
 
 export const skillColor: Partial<Record<TSkillIconKey, string>> = {
