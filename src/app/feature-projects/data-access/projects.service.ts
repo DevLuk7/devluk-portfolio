@@ -26,6 +26,7 @@ export class ProjectsService {
         'rxjs',
         'chartdotjs',
         'd3dotjs',
+        'keycloak',
       ],
     },
     {
@@ -55,7 +56,7 @@ export class ProjectsService {
     {
       name: 'Swiss Election System',
       desc: 'Developed a system for public officials to manage elections, track progress, and generate outcome reports in Switzerland.',
-      skills: ['typescript', 'angular', 'ngrx', 'rxjs'],
+      skills: ['typescript', 'angular', 'ngrx', 'rxjs', 'keycloak'],
     },
     {
       name: 'Affiliate system for FinTech',

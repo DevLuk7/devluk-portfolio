@@ -42,6 +42,7 @@ import {
   siLucide,
   siPassport,
   siOpenapiinitiative,
+  siKeycloak,
 } from 'simple-icons';
 
 const randomColors = [
@@ -102,6 +103,7 @@ export const skillIcon = {
   lucide: siLucide,
   passport: siPassport,
   openapiinitiativea: siOpenapiinitiative,
+  keycloak: siKeycloak,
 };
 
 export const skillColor: Partial<Record<TSkillIconKey, string>> = {
