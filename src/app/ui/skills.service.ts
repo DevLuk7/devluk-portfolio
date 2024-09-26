@@ -33,6 +33,13 @@ import {
   siGitlab,
   siNextdotjs,
   siExpress,
+  siRedux,
+  siShadcnui,
+  siOpenai,
+  siDigitalocean,
+  siChromewebstore,
+  siLucid,
+  siLucide,
 } from 'simple-icons';
 
 const randomColors = [
@@ -85,6 +92,12 @@ export const skillIcon = {
   elf: null,
   nextdotjs: siNextdotjs,
   express: siExpress,
+  redux: siRedux,
+  shadcnui: siShadcnui,
+  openai: siOpenai,
+  digitalocean: siDigitalocean,
+  chromewebstore: siChromewebstore,
+  lucide: siLucide,
 };
 
 export const skillColor: Partial<Record<TSkillIconKey, string>> = {

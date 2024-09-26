@@ -13,9 +13,20 @@
       @for (project of workProjects; track $index) {
       <div class="space-y-4 py-5">
         <h3
-          class="text-2xl font-bold leading-tight text-gray-900 dark:text-white"
+          class="text-2xl font-bold leading-tight text-gray-900 dark:text-white flex items-center justify-center"
         >
           {{ project.name }}
+          @if (project.link) {
+          <a
+            [href]="project.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="ml-2 text-blue-500 hover:text-blue-600"
+            title="Open project"
+          >
+            <lucide-icon [img]="externalLinkIcon" [size]="20"></lucide-icon>
+          </a>
+          }
         </h3>
         <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
           {{ project.desc }}

@@ -5,6 +5,7 @@ export interface Project {
   name: string;
   desc: string;
   skills: TSkillIconKey[];
+  link?: string;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -92,6 +93,27 @@ export class ProjectsService {
       name: 'Portfolio',
       desc: 'Built a personal portfolio website to showcase my work and skills.',
       skills: ['typescript', 'angular', 'rxjs', 'sass', 'rwd', 'tailwindcss'],
+    },
+    {
+      name: 'Learning English',
+      desc: 'Personalized English learning application to enhance language skills through interactive exercises, progress tracking, and customized lesson plans.',
+      skills: [
+        'typescript',
+        'react',
+        'nextdotjs',
+        'redux',
+        'nestjs',
+        'sass',
+        'shadcnui',
+        'tailwindcss',
+        'vercel',
+        'rwd',
+        'openai',
+        'digitalocean',
+        'chromewebstore',
+        'lucide',
+      ],
+      link: 'https://english-ai-ui.vercel.app',
     },
   ];
 }
