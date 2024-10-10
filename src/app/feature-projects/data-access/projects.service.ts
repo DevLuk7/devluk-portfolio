@@ -96,8 +96,8 @@ export class ProjectsService {
       skills: ['typescript', 'angular', 'rxjs', 'sass', 'rwd', 'tailwindcss'],
     },
     {
-      name: 'Learning English',
-      desc: 'Personalized English learning application to enhance language skills through interactive exercises, progress tracking, and customized lesson plans.',
+      name: 'Learnet',
+      desc: 'Improve your English with interactive exercises! Our platform helps you learn through everyday vocabulary, allowing you to add new phrases effortlessly using our Chrome plugin.',
       skills: [
         'typescript',
         'react',
@@ -118,7 +118,7 @@ export class ProjectsService {
         'chromewebstore',
         'lucide',
       ],
-      link: 'https://english-ai-ui.vercel.app',
+      link: 'https://learnet.pl',
     },
   ];
 }
