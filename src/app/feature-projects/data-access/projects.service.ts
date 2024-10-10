@@ -118,7 +118,7 @@ export class ProjectsService {
         'chromewebstore',
         'lucide',
       ],
-      link: 'https://learnet.pl',
+      link: 'https://learnet.pl?utm_source=portfolio&utm_medium=button_side_project&utm_campaign=launch',
     },
   ];
 }
