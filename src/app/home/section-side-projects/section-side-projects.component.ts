@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ExternalLink, LucideAngularModule } from 'lucide-angular';
+import { SkillBadgeComponent } from '../../ui/skill-badge/skill-badge.component';
 import {
   Project,
   ProjectsService,
-} from 'src/app/feature-projects/data-access/projects.service';
-import { SkillBadgeComponent } from 'src/app/ui/skill-badge/skill-badge.component';
-import { ExternalLink, LucideAngularModule } from 'lucide-angular';
+} from '../../feature-projects/data-access/projects.service';
 
 @Component({
   selector: 'app-section-side-projects',

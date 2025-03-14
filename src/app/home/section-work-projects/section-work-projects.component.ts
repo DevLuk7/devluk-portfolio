@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SkillBadgeComponent } from 'src/app/ui/skill-badge/skill-badge.component';
 import {
   Project,
   ProjectsService,
-} from 'src/app/feature-projects/data-access/projects.service';
+} from '../../feature-projects/data-access/projects.service';
+import { SkillBadgeComponent } from '../../ui/skill-badge/skill-badge.component';
 
 @Component({
   selector: 'app-section-work-projects',

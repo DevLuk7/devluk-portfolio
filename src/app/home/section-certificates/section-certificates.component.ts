@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TSkillIconKey } from 'src/app/ui/skills.service';
-import { SkillIconComponent } from 'src/app/ui/skill-icon/skill-icon.component';
-import { CtaLinkComponent } from 'src/app/ui/cta-link/cta-link.component';
+import { CtaLinkComponent } from '../../ui/cta-link/cta-link.component';
+import { TSkillIconKey } from '../../ui/skills.service';
 
 @Component({
   selector: 'app-section-certificates',
   standalone: true,
-  imports: [CommonModule, SkillIconComponent, CtaLinkComponent],
+  imports: [CommonModule, CtaLinkComponent],
   templateUrl: './section-certificates.component.html',
   styleUrl: './section-certificates.component.scss',
 })

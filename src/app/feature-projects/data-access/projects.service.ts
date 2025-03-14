@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { TSkillIconKey } from 'src/app/ui/skills.service';
+import { TSkillIconKey } from '../../ui/skills.service';
 
 export interface Project {
   name: string;

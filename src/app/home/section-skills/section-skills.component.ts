@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SkillIconComponent } from 'src/app/ui/skill-icon/skill-icon.component';
-import { TSkillIconKey } from 'src/app/ui/skills.service';
+import { SkillIconComponent } from '../../ui/skill-icon/skill-icon.component';
+import { TSkillIconKey } from '../../ui/skills.service';
 
 @Component({
   selector: 'app-section-skills',
