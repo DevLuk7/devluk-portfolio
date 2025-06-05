@@ -8,7 +8,7 @@ import { Component, input } from '@angular/core';
   styleUrl: './chat-bubble.component.scss',
 })
 export class ChatBubbleComponent {
-  readonly imgSrc = input.required<string>();
+  readonly imgSrc = input<string>();
   readonly name = input.required<string>();
   readonly date = input.required<Date>();
   readonly message = input.required<string>();

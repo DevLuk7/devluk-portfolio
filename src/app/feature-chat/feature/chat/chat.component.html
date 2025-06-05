@@ -1,10 +1,12 @@
 <div class="p-4">
+  @for (response of responses; track $index) {
   <app-chat-bubble
-    name="DevLuk"
-    [date]="date"
-    imgSrc="images/profile.jpeg"
-    message="Czesc co tam slychac?"
+    [name]="response.name"
+    [imgSrc]="response.imgSrc"
+    [date]="response.date"
+    [message]="response.message"
   />
+  }
 </div>
 
-<app-chat-input />
+<app-chat-input (send)="send($event)" />
