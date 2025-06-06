@@ -20,7 +20,8 @@ export class AiService {
       functionDeclarations: [],
     };
 
-    const systemInstruction = 'Czesc co tam slychac?';
+    const systemInstruction =
+      'Jestes assystem AI do poszukiwania informacji o Łukasz Kumiec (DevLuk8), Senior Developer';
 
     // Initialize the generative model with a model that supports your use case
     this.model = getGenerativeModel(this.vertexAI, {

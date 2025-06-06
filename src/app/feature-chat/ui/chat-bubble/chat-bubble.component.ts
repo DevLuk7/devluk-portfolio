@@ -12,4 +12,5 @@ export class ChatBubbleComponent {
   readonly name = input.required<string>();
   readonly date = input.required<Date>();
   readonly message = input.required<string>();
+  readonly direction = input.required<'right' | 'left'>();
 }

@@ -13,21 +13,36 @@ export class ChatComponent {
   private readonly aiService = inject(AiService);
 
   readonly date = new Date();
-  readonly responses: any[] = [];
+  readonly responses: any & { direction: 'left' | 'right' }[] = [
+    {
+      name: 'DevLuk AI Bot',
+      date: new Date(),
+      imgSrc: 'images/profile-ai.png',
+      message: 'Hej jestem czego chcialbys sie dowiedziec o DevLuk?',
+      direction: 'left',
+    },
+    // {
+    //   name: 'User',
+    //   date: new Date(),
+    //   message: 'Czesc co tam?',
+    //   direction: 'right',
+    // },
+  ];
 
   async send(e: string) {
-    console.log(e);
     this.responses.push({
-      name: 'DevLuk',
+      name: 'User',
       date: new Date(),
-      imgSrc: 'images/profile.jpeg',
       message: e,
+      direction: 'right',
     });
     const response = await this.aiService.ask(e);
     this.responses.push({
-      name: 'AI',
+      name: 'DevLuk AI Bot',
       date: new Date(),
+      imgSrc: 'images/profile-ai.png',
       message: response,
+      direction: 'left',
     });
     console.log(response);
   }
