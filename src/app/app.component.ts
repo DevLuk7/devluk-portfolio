@@ -1,7 +1,7 @@
 import { Component, inject, isDevMode } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './feature/footer/footer.component';
+import { HeaderComponent } from './feature/header/header.component';
 import { GoogleAnalyticsService } from './utils/google-analytics.service';
 
 @Component({
