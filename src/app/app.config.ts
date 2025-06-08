@@ -6,7 +6,10 @@ import {
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { appRoutes } from './app.routes';
-import { provideClientHydration } from '@angular/platform-browser';
+import {
+  provideClientHydration,
+  withEventReplay,
+} from '@angular/platform-browser';
 import { WINDOW } from './utils/window';
 import { isPlatformBrowser } from '@angular/common';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -25,7 +28,7 @@ export const config = () => {
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideClientHydration(),
+    provideClientHydration(withEventReplay()),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(appRoutes),
     {
@@ -47,7 +50,7 @@ export const appConfig: ApplicationConfig = {
         authDomain: 'portfolio-83e54.firebaseapp.com',
         messagingSenderId: '790412593531',
         measurementId: 'G-DMM701QRZK',
-      })
+      }),
     ),
     provideVertexAI(() => getVertexAI()),
   ],

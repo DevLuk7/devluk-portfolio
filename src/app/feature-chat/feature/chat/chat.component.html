@@ -1,13 +1,25 @@
 <div class="p-4">
-  @for (response of responses; track $index) {
-  <app-chat-bubble
-    [name]="response.name"
-    [imgSrc]="response.imgSrc"
-    [date]="response.date"
-    [message]="response.message"
-    [direction]="response.direction"
-  />
+  @if (agentService.agentResource.isLoading()) {
+    <div class="loading-container">Loading</div>
+  }
+  @for (item of agentService.chat(); track item.id) {
+    @if (item.role === 'USER') {
+      <app-chat-bubble
+        [name]="item.role"
+        [date]="date"
+        [message]="item.text"
+        direction="right"
+      />
+    } @else if (item.role === 'AGENT') {
+      <app-chat-bubble
+        [name]="item.role"
+        imgSrc="images/profile-ai.png"
+        [date]="date"
+        [message]="item.text"
+        direction="left"
+      />
+    }
   }
 </div>
 
-<app-chat-input (send)="send($event)" />
+<app-chat-input />

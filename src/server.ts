@@ -7,11 +7,14 @@ import {
 import express from 'express';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { expressHandler } from '@genkit-ai/express';
+import { chatFlow } from './flows';
 
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 const browserDistFolder = resolve(serverDistFolder, '../browser');
 
 const app = express();
+app.use(express.json());
 const angularApp = new AngularNodeAppEngine();
 
 /**
@@ -25,6 +28,11 @@ const angularApp = new AngularNodeAppEngine();
  * });
  * ```
  */
+
+/**
+ * Define an endpoint to call a flow.
+ */
+app.post('/chatFlow', expressHandler(chatFlow));
 
 /**
  * Serve static files from /browser

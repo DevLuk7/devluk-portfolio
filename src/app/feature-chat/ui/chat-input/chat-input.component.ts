@@ -1,5 +1,6 @@
-import { Component, model, output } from '@angular/core';
+import { Component, inject, model, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AgentService } from '../../../utils/agent.service';
 
 @Component({
   selector: 'app-chat-input',
@@ -8,7 +9,14 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './chat-input.component.scss',
 })
 export class ChatInputComponent {
-  readonly send = output<string>();
+  readonly agentService = inject(AgentService);
 
-  readonly prompt = model<string>('Dobrze co tam?');
+  readonly userInput = model<string>('Powiedz mi cos wiecej o DevLuk');
+
+  onSubmit(): void {
+    if (this.userInput() !== '') {
+      this.agentService.updateChatFromUser(this.userInput());
+      this.userInput.set('');
+    }
+  }
 }

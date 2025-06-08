@@ -1,7 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { ChatBubbleComponent } from '../../ui/chat-bubble/chat-bubble.component';
 import { ChatInputComponent } from '../../ui/chat-input/chat-input.component';
-import { AiService } from '../../../utils/ai.service';
+import { AgentService } from '../../../utils/agent.service';
 
 @Component({
   selector: 'app-chat',
@@ -10,7 +10,7 @@ import { AiService } from '../../../utils/ai.service';
   styleUrl: './chat.component.scss',
 })
 export class ChatComponent {
-  private readonly aiService = inject(AiService);
+  readonly agentService = inject(AgentService);
 
   readonly date = new Date();
   readonly responses: any & { direction: 'left' | 'right' }[] = [
@@ -21,13 +21,9 @@ export class ChatComponent {
       message: 'Hej jestem czego chcialbys sie dowiedziec o DevLuk?',
       direction: 'left',
     },
-    // {
-    //   name: 'User',
-    //   date: new Date(),
-    //   message: 'Czesc co tam?',
-    //   direction: 'right',
-    // },
   ];
+
+  userInput = '';
 
   async send(e: string) {
     this.responses.push({
@@ -36,7 +32,7 @@ export class ChatComponent {
       message: e,
       direction: 'right',
     });
-    const response = await this.aiService.ask(e);
+    const response = await this.agentService.updateChatFromUser(e);
     this.responses.push({
       name: 'DevLuk AI Bot',
       date: new Date(),
