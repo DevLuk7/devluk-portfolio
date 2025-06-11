@@ -3,7 +3,7 @@ import { runFlow } from 'genkit/beta/client';
 
 const USER = 'USER';
 const AGENT = 'AGENT';
-const ENDPOINT = '/chatFlow';
+const ENDPOINT = 'http://localhost:4200/chatFlow';
 
 @Injectable({
   providedIn: 'root',
@@ -11,8 +11,6 @@ const ENDPOINT = '/chatFlow';
 export class AgentService {
   userInput = signal('');
 
-  // Only set this on the initial request
-  // Note: for demonstration purposes only; use security best practices for managing sessions
   sessionId = linkedSignal<string, string>({
     source: () => this.agentResource.value()?.agentResponse || '',
     computation: (_agentResponse, previous): string =>
@@ -21,7 +19,6 @@ export class AgentService {
         : previous.value,
   });
 
-  // Set to true on the initial request, otherwise false to preserve the session
   clearSession = linkedSignal({
     source: () => (this.agentResource.value() as any)?.agentResponse,
     computation: (_agentResponse, previous): boolean => !previous,
@@ -50,10 +47,6 @@ export class AgentService {
           sessionId: this.sessionId(),
           clearSession: this.clearSession(),
         },
-      }).then((x) => {
-        console.log(x);
-
-        return x;
       });
     },
   });
@@ -70,6 +63,7 @@ export class AgentService {
       id: Math.floor(Math.random() * 2000),
       role,
       text,
+      date: new Date(),
     };
   }
 }
@@ -80,6 +74,7 @@ interface Chat {
   id: number;
   role: Role;
   text: string;
+  date: Date;
 }
 
 interface AgentResponse {

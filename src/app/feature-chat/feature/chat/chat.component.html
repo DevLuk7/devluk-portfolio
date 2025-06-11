@@ -1,4 +1,4 @@
-<div class="p-4">
+<div class="flex flex-col-reverse p-4">
   @if (agentService.agentResource.isLoading()) {
     <div class="loading-container">Loading</div>
   }
@@ -6,7 +6,7 @@
     @if (item.role === 'USER') {
       <app-chat-bubble
         [name]="item.role"
-        [date]="date"
+        [date]="item.date"
         [message]="item.text"
         direction="right"
       />
@@ -14,7 +14,7 @@
       <app-chat-bubble
         [name]="item.role"
         imgSrc="images/profile-ai.png"
-        [date]="date"
+        [date]="item.date"
         [message]="item.text"
         direction="left"
       />
